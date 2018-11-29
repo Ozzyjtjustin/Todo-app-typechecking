@@ -1,8 +1,27 @@
 // @flow
 import React, { Component } from 'react';
+import Note from './components/Note';
 import './App.css';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      noteText: '',
+      notes: [],
+    }
+  }
+
+  updateNoteText(noteText){
+    this.setState({ noteText: noteText.target.value})
+  }
+
+  handleKeyPress = (event) => {
+    if(event.key === 'Entar'){
+
+    }
+  }
   render() {
     return (
       <div className="container">
@@ -11,7 +30,14 @@ class App extends Component {
 
         <div className="btn">+</div>
 
-        <input type="text" ref="" />
+        <input 
+          type="text" 
+          className="textInput" 
+          value={this.state.noteText} 
+          ref={((input)=> {this.textInput=input})}
+          onChangeText={noteText => this.updateNoteText(noteText)}
+          onKeyPress={this.handleKeyPress.bind(this)}
+          />
 
       </div>
     );
