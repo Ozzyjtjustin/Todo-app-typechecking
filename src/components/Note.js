@@ -1,7 +1,13 @@
 // @flow
 import React, { Component } from 'react';
 
-class Note extends Component {
+type Props = {
+    key:number, 
+    text:string,
+    deleteMethod:function
+} 
+
+class Note extends Component <Props> {
 
   render() {
     return (
