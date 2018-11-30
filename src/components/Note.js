@@ -7,15 +7,12 @@ type Props = {
     deleteMethod:function
 } 
 
-class Note extends Component <Props> {
-
-  render() {
+const Note = (props: Props) =>  {
     return (
-      <div className="note" onClick={this.props.deleteMethod}>
-        {this.props.text}
+      <div className="note" onClick={props.deleteMethod}>
+        {props.text}
       </div>
     );
   }
-}
 
 export default Note;

@@ -4,10 +4,15 @@ import Note from './components/Note';
 import './App.css';
  
 
+type State = {
+  noteText:string,
+  notes:string
+} 
+type Props = {} 
 
-class App extends Component {
+class App extends Component <State, Props>{
 
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
     this.state = {
       noteText: '',
