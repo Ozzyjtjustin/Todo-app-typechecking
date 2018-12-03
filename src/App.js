@@ -3,11 +3,12 @@ import React, { Component } from 'react';
 import Note from './components/Note';
 import './App.css';
  
-
+ 
 type State = {
   noteText:string,
   notes:string
 } 
+
 type Props = {} 
 
 class App extends Component <State, Props>{

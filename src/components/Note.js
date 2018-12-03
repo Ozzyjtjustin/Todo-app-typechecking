@@ -16,3 +16,4 @@ const Note = (props: Props) =>  {
   }
 
 export default Note;
+ 
