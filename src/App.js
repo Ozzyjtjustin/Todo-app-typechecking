@@ -9,7 +9,9 @@ type State = {
   notes:string
 } 
 
-type Props = {} 
+type Props = {
+  noteText:string,
+} 
 
 class App extends Component <State, Props>{
 
