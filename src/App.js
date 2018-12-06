@@ -11,23 +11,24 @@ type State = {
 
 type Props = {
   noteText:string,
+  notes:string
 } 
 
 class App extends Component <State, Props>{
 
   constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = {
       noteText: '',
       notes: [],
     }
   }
 
-  updateNoteText(noteText){
+  updateNoteText(noteText:string){
     this.setState({ noteText: noteText.target.value})
   }
 
-  handleKeyPress = (event) => {
+  handleKeyPress = (event:function) => {
     if(event.key === 'Enter'){
         let notesArr = this.state.notes;
         notesArr.push(this.state.noteText);
@@ -35,7 +36,7 @@ class App extends Component <State, Props>{
     }
   }
 
-  deleteNote(index){
+  deleteNote(index:number){
     let notesArr = this.state.notes;
     notesArr.splice(index, 1)
     this.setState({ notes: notesArr })
